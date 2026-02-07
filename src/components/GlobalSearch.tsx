@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Search, FileText, Database, Calendar, Activity, Clock, Filter } from "lucide-react";
 import { format, subDays, subWeeks, addDays } from "date-fns";
 
@@ -178,7 +178,7 @@ export function GlobalSearch() {
   const [searchHistory, setSearchHistory] = useState<string[]>([]);
 
   // Combine all mock data
-  const allData = [...mockDocuments, ...mockMemories, ...mockTasks, ...mockActivities];
+  const allData = useMemo(() => [...mockDocuments, ...mockMemories, ...mockTasks, ...mockActivities], []);
 
   useEffect(() => {
     if (searchQuery.trim() === "") {
