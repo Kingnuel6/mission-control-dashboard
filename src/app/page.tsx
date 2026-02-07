@@ -12,7 +12,7 @@ export default function Home() {
       <div className="text-center space-y-2">
         <h1 className="text-4xl font-bold tracking-tight">Mission Control</h1>
         <p className="text-muted-foreground">
-          Track your AI assistant's activities, schedule tasks, and search your workspace
+          Track your AI assistant&apos;s activities, schedule tasks, and search your workspace
         </p>
       </div>
 

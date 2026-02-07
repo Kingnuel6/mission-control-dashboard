@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search, FileText, Memory, Calendar, Activity, Database, Clock, Filter } from "lucide-react";
+import { Search, FileText, Database, Calendar, Activity, Clock, Filter } from "lucide-react";
 import { format, subDays, subWeeks, addDays } from "date-fns";
 
 interface SearchResult {
@@ -158,7 +158,7 @@ const mockActivities: SearchResult[] = [
 
 const typeIcons = {
   document: FileText,
-  memory: Memory,
+  memory: Database,
   task: Calendar,
   activity: Activity
 };
@@ -214,7 +214,7 @@ export function GlobalSearch() {
     }, 300);
 
     return () => clearTimeout(timer);
-  }, [searchQuery, selectedType, searchHistory]);
+  }, [searchQuery, selectedType, searchHistory, allData]);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -383,7 +383,7 @@ export function GlobalSearch() {
         {!isSearching && searchQuery && searchResults.length === 0 && (
           <div className="text-center py-8 text-muted-foreground">
             <Search className="h-12 w-12 mx-auto mb-4 opacity-50" />
-            <p>No results found for "{searchQuery}"</p>
+            <p>No results found for &ldquo;{searchQuery}&rdquo;</p>
             <p className="text-sm mt-2">Try different keywords or search terms.</p>
           </div>
         )}
