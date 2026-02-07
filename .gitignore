@@ -4,6 +4,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Next.js specific large files
+node_modules/@next/swc-linux-x64-gnu/next-swc.linux-x64-gnu.node
+
 # Next.js
 .next/
 out/
