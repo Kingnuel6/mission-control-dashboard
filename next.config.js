@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // Next.js 14 uses App Router by default, no experimental config needed
 };
 
 module.exports = nextConfig;
