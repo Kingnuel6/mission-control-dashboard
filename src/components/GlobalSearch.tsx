@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { Search, FileText, Database, Calendar, Activity, Clock, Filter } from "lucide-react";
 import { format, subDays, subWeeks, addDays, subHours } from "date-fns";
+import { cn } from "@/lib/utils";
 
 interface SearchResult {
   id: string;
